@@ -1,5 +1,5 @@
 /**
- * PaymentObject.java
+ * objects/PaymentObject.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

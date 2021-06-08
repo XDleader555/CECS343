@@ -1,5 +1,5 @@
 /**
- * ExpenseRecord.java
+ * records/ExpenseRecord.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

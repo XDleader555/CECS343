@@ -1,5 +1,5 @@
 /**
- * PaymentRecord.java
+ * records/PaymentRecord.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

@@ -1,5 +1,5 @@
 /**
- * LoginRecord.java
+ * records/LoginRecord.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

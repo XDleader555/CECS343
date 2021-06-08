@@ -1,5 +1,5 @@
 /**
- * ExpenseObject.java
+ * objects/ExpenseObject.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

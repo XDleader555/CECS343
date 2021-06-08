@@ -1,5 +1,5 @@
 /**
- * LoginObject.java
+ * objects/LoginObject.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi

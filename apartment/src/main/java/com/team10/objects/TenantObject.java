@@ -1,5 +1,5 @@
 /**
- * TenantObject.java
+ * objects/TenantObject.java
  * 
  * Copyright (c) 2021
  * Andrew Miyaguchi
