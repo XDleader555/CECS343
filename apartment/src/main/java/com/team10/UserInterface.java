@@ -11,6 +11,12 @@
 
 package com.team10;
 
+import com.team10.objects.ExpenseObject;
+import com.team10.objects.LoginObject;
+import com.team10.objects.PaymentObject;
+import com.team10.objects.TenantObject;
+import com.team10.AnnualReport;
+
 public class UserInterface
 {
     public UserInterface() {

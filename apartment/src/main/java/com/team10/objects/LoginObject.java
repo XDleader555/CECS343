@@ -11,6 +11,8 @@
 
 package com.team10.objects;
 
+import com.team10.records.LoginRecord;
+
 public class LoginObject
 {
     public LoginObject() {

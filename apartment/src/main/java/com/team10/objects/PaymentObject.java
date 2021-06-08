@@ -11,6 +11,8 @@
 
 package com.team10.objects;
 
+import com.team10.records.PaymentRecord;
+
 public class PaymentObject
 {
     public PaymentObject() {

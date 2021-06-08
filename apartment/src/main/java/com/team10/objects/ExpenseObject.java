@@ -9,7 +9,9 @@
  * 
  */
 
-package com.team10;
+package com.team10.objects;
+
+import com.team10.records.ExpenseRecord;
 
 public class ExpenseObject
 {

@@ -11,6 +11,9 @@
 
 package com.team10;
 
+import com.team10.records.ExpenseRecord;
+import com.team10.records.PaymentRecord;
+
 public class AnnualReport
 {
     public AnnualReport() {
