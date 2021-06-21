@@ -18,4 +18,27 @@ public class LoginObject
     public LoginObject() {
         
     }
+
+    //Set and Get
+    public void SetUserName(String UserName){
+        this.UserName = UserName;
+    }
+    public String GetUserName(){
+        return UserName;
+    }
+
+    public void SetPassword(String Password){
+        this.Password = Password;
+    }
+    public String GetPassword(){
+        return Password;
+    }
+
+    public void SetEmail(String Email){
+        this.Email = Email;
+    }
+    public String GetEmail(){
+        return Email;
+    }
+
 }
