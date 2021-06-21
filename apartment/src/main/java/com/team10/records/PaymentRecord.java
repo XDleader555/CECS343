@@ -10,11 +10,24 @@
  */
 
 package com.team10.records;
-import com.team10.Records.RecordParent;
+import java.util.ArrayList;
+
+import com.team10.objects.PaymentObject;
+import com.team10.records.RecordParent;
 
 public class PaymentRecord extends RecordParent
-{
+{   
+    ArrayList<PaymentObject> paymentRecord;
+    
     public PaymentRecord() {
         
+    }
+
+    public ArrayList getRecord() {
+        return paymentRecord;
+    }
+
+    public void addPayment(PaymentObject p) {
+        paymentRecord.add(p);
     }
 }

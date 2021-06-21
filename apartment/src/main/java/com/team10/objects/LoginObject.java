@@ -14,7 +14,11 @@ package com.team10.objects;
 import com.team10.records.LoginRecord;
 
 public class LoginObject
-{
+{   
+    String UserName;
+    String Password;
+    String Email;
+
     public LoginObject() {
         
     }
@@ -23,6 +27,7 @@ public class LoginObject
     public void SetUserName(String UserName){
         this.UserName = UserName;
     }
+
     public String GetUserName(){
         return UserName;
     }
@@ -30,6 +35,7 @@ public class LoginObject
     public void SetPassword(String Password){
         this.Password = Password;
     }
+
     public String GetPassword(){
         return Password;
     }
@@ -37,6 +43,7 @@ public class LoginObject
     public void SetEmail(String Email){
         this.Email = Email;
     }
+    
     public String GetEmail(){
         return Email;
     }

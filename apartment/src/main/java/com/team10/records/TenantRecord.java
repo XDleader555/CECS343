@@ -10,11 +10,24 @@
  */
 
 package com.team10.records;
-import com.team10.Records.RecordParent;
+import java.util.ArrayList;
 
-public class TenantObject extends RecordParent
-{
+import com.team10.objects.TenantObject;
+import com.team10.records.RecordParent;
+
+public class TenantRecord extends RecordParent
+{   
+    ArrayList<TenantObject> tenantRecord;
+    
     public TenantRecord() {
         
+    }
+
+    public ArrayList getRecord() {
+        return tenantRecord;
+    }
+
+    public void addTenant(TenantObject t) {
+        tenantRecord.add(t);
     }
 }
