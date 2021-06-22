@@ -53,4 +53,8 @@ public class TenantObject
     public int getTenantID(){
         return TenantID;
     }
+
+    public String toString() {
+        return "Tenant Name: " + Name + " Apartment Number: " + AptNum + " Tenant ID: " + TenantID;
+    }
 }

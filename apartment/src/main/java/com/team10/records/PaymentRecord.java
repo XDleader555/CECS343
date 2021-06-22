@@ -20,7 +20,7 @@ public class PaymentRecord extends RecordParent
     ArrayList<PaymentObject> paymentRecord;
     
     public PaymentRecord() {
-        
+        paymentRecord = new ArrayList<PaymentObject>();
     }
 
     public ArrayList getRecord() {

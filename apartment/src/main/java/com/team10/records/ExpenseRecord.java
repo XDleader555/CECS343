@@ -20,7 +20,7 @@ public class ExpenseRecord extends RecordParent
     ArrayList<ExpenseObject> expenseRecord;
     
     public ExpenseRecord() {
-        
+        expenseRecord = new ArrayList<ExpenseObject>();
     }
 
     public ArrayList getRecord() {

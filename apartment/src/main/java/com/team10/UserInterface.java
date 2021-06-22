@@ -17,6 +17,7 @@ import com.team10.objects.PaymentObject;
 import com.team10.objects.TenantObject;
 import com.team10.records.TenantRecord;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.team10.AnnualReport;
@@ -39,7 +40,7 @@ public class UserInterface
 
     public void userInputTenant() {
         Scanner scan = new Scanner(System.in);
-
+        
         System.out.println("Please input the tenant name: ");
         String name = scan.nextLine();
 
@@ -51,6 +52,9 @@ public class UserInterface
 
         TenantObject t = new TenantObject(name, aptNum, id);
         tenantRecord.addTenant(t);
-        scan.close();
+    }
+
+    public void displayTenantRecord() {
+        tenantRecord.displayRecord();
     }
 }
