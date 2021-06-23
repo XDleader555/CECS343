@@ -47,10 +47,7 @@ public class UserInterface
         System.out.println("Please input the tenant apartment number: ");
         int aptNum = scan.nextInt();
 
-        System.out.println("Please input the tenant ID: ");
-        int id = scan.nextInt();
-
-        TenantObject t = new TenantObject(name, aptNum, id);
+        TenantObject t = new TenantObject(name, aptNum);
         tenantRecord.addTenant(t);
     }
 

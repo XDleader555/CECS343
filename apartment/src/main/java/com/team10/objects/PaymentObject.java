@@ -15,19 +15,17 @@ import com.team10.records.PaymentRecord;
 
 public class PaymentObject
 {
-    int TenantID;
+    int AptNum;
     int Month;
-    int Year;
-    Double PaymentAmount;
+    double PaymentAmount;
 
     public PaymentObject() {
         
     }
 
-    public PaymentObject(int TenantID, int Month, int Year, Double PaymentAmount){
-        this.TenantID = TenantID;
+    public PaymentObject(int AptNum, int Month, double PaymentAmount){
+        this.AptNum = AptNum;
         this.Month = Month;
-        this.Year = Year;
         this.PaymentAmount = PaymentAmount;
     }
 }

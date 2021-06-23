@@ -30,4 +30,10 @@ public class PaymentRecord extends RecordParent
     public void addPayment(PaymentObject p) {
         paymentRecord.add(p);
     }
+
+    public void displayRecord() {
+        for(int i = 0; i < paymentRecord.size(); i++) {
+            System.out.println(paymentRecord.get(i));
+        }
+    }
 }

@@ -30,4 +30,10 @@ public class ExpenseRecord extends RecordParent
     public void addExpense(ExpenseObject e) {
         expenseRecord.add(e);
     }
+
+    public void displayRecord() {
+        for(int i = 0; i < expenseRecord.size(); i++) {
+            System.out.println(expenseRecord.get(i));
+        }
+    }
 }

@@ -17,16 +17,14 @@ public class TenantObject
 {
     String Name;
     int AptNum;
-    int TenantID;
 
     public TenantObject() {
         
     }
 
-    public TenantObject(String Name, int AptNum, int TenantID) {
+    public TenantObject(String Name, int AptNum) {
         this.Name = Name;
         this.AptNum = AptNum;
-        this.TenantID = TenantID;
     }
 
     //Set and Get
@@ -46,15 +44,7 @@ public class TenantObject
         return AptNum;
     }
 
-    public void setTenantID(int TenantID){
-        this.TenantID = TenantID;
-    }
-
-    public int getTenantID(){
-        return TenantID;
-    }
-
     public String toString() {
-        return "Tenant Name: " + Name + " Apartment Number: " + AptNum + " Tenant ID: " + TenantID;
+        return "Apartment Number: " + AptNum + " Tenant Name: " + Name;
     }
 }
