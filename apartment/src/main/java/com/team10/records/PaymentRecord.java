@@ -17,7 +17,7 @@ import com.team10.records.RecordParent;
 
 public class PaymentRecord extends RecordParent
 {   
-    ArrayList<PaymentObject> paymentRecord;
+    ArrayList<PaymentObject> paymentRecord; 
     
     public PaymentRecord() {
         paymentRecord = new ArrayList<PaymentObject>();
@@ -32,8 +32,8 @@ public class PaymentRecord extends RecordParent
     }
 
     public void displayRecord() {
-        for(int i = 0; i < paymentRecord.size(); i++) {
-            System.out.println(paymentRecord.get(i));
-        }
+
     }
+
+
 }

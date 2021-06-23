@@ -35,6 +35,19 @@ public class UserInterface
     }
 
     public void userInputPayment() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Please input the tenant apartment number: ");
+        int aptNum = scan.nextInt();
+
+        System.out.println("Input the month of the payment: ");
+        int month = scan.nextInt();
+
+        System.out.println("Input the amount paid: ");
+        double amount = scan.nextDouble();
+
+        TenantObject ten = tenantRecord.getTenant(aptNum);
+        ten.addPayment(month, amount);
 
     }
 
@@ -52,6 +65,10 @@ public class UserInterface
     }
 
     public void displayTenantRecord() {
-        tenantRecord.displayRecord();
+        tenantRecord.displayTenantRecord();
+    }
+
+    public void displayPaymentRecord() {
+        tenantRecord.displayPaymentRecord();
     }
 }

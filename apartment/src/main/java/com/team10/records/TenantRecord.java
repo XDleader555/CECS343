@@ -11,6 +11,7 @@
 
 package com.team10.records;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.team10.objects.TenantObject;
 import com.team10.records.RecordParent;
@@ -31,9 +32,24 @@ public class TenantRecord extends RecordParent
         tenantRecord.add(t);
     }
 
-    public void displayRecord() {
+    public TenantObject getTenant(int aptNum) {
+        for(int i = 0; i < tenantRecord.size(); i++) {
+            if (tenantRecord.get(i).getAptNumber() == aptNum) {
+                return tenantRecord.get(i);
+            }
+        }
+        return tenantRecord.get(0);
+    }
+
+    public void displayTenantRecord() {
         for(int i = 0; i < tenantRecord.size(); i++) {
             System.out.println(tenantRecord.get(i));
+        }
+    }
+
+    public void displayPaymentRecord() {
+        for(int i = 0; i < tenantRecord.size(); i++) {
+            System.out.println(Arrays.toString(tenantRecord.get(i).getPayment()));
         }
     }
 }

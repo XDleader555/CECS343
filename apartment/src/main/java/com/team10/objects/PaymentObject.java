@@ -28,4 +28,8 @@ public class PaymentObject
         this.Month = Month;
         this.PaymentAmount = PaymentAmount;
     }
+
+    public int getAptNum() {
+        return AptNum;
+    }
 }

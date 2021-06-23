@@ -17,6 +17,7 @@ public class TenantObject
 {
     String Name;
     int AptNum;
+    double[] payment;
 
     public TenantObject() {
         
@@ -25,6 +26,8 @@ public class TenantObject
     public TenantObject(String Name, int AptNum) {
         this.Name = Name;
         this.AptNum = AptNum;
+        payment = new double[13];
+        payment[0] = AptNum;
     }
 
     //Set and Get
@@ -42,6 +45,14 @@ public class TenantObject
 
     public int getAptNumber(){
         return AptNum;
+    }
+
+    public void addPayment(int month, double amount) {
+        payment[month+1] = amount;
+    }
+
+    public double[] getPayment() {
+        return payment;
     }
 
     public String toString() {

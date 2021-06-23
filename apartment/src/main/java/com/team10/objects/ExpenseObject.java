@@ -15,6 +15,9 @@ import com.team10.records.ExpenseRecord;
 
 public class ExpenseObject
 {
+    int day;
+    int month;
+    
     public ExpenseObject() {
         
     }
