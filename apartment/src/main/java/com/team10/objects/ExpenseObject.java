@@ -15,10 +15,25 @@ import com.team10.records.ExpenseRecord;
 
 public class ExpenseObject
 {
-    int day;
     int month;
-    
+    int day;
+    String payee;
+    double amount;
+    String category;
+
     public ExpenseObject() {
         
+    }
+
+    public ExpenseObject(int month, int day, String payee, double amount, String category) {
+        this.month = month;
+        this.day = day;
+        this.payee = payee;
+        this.amount = amount;
+        this.category = category;
+    }
+
+    public String toString() {
+        return month + "/" + day + " " + payee + " " + amount + " " + category;
     }
 }

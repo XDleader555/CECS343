@@ -31,7 +31,7 @@ public class ExpenseRecord extends RecordParent
         expenseRecord.add(e);
     }
 
-    public void displayRecord() {
+    public void displayExpenseRecord() {
         for(int i = 0; i < expenseRecord.size(); i++) {
             System.out.println(expenseRecord.get(i));
         }
