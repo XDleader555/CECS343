@@ -31,6 +31,14 @@ public class ExpenseRecord extends RecordParent
         expenseRecord.add(e);
     }
 
+    public double calculateExpenseSum() {
+        double sum = 0;
+        for(int i = 0; i < expenseRecord.size(); i++) {
+            sum += expenseRecord.get(i).getAmount();
+        }
+        return sum;
+    }
+
     public void displayExpenseRecord() {
         for(int i = 0; i < expenseRecord.size(); i++) {
             System.out.println(expenseRecord.get(i));

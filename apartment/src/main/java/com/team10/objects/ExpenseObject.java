@@ -33,6 +33,10 @@ public class ExpenseObject
         this.category = category;
     }
 
+    public double getAmount() {
+        return amount;
+    }
+
     public String toString() {
         return month + "/" + day + " " + payee + " " + amount + " " + category;
     }

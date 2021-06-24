@@ -25,11 +25,14 @@ import com.team10.AnnualReport;
 
 public class UserInterface
 {
-    TenantRecord tenantRecord = new TenantRecord();
-    ExpenseRecord expenseRecord = new ExpenseRecord();
+    TenantRecord tenantRecord;
+    ExpenseRecord expenseRecord;
+    AnnualReport annualReport;
 
     public UserInterface() {
-        
+        tenantRecord = new TenantRecord();
+        expenseRecord = new ExpenseRecord();
+        annualReport = new AnnualReport();
     }
 
     public void userInputExpense() {
@@ -40,12 +43,14 @@ public class UserInterface
 
         System.out.println("Enter day of expense: ");
         int day = scan.nextInt();
+        scan.nextLine();
 
         System.out.println("Enter payee name: ");
         String payee = scan.nextLine();
 
         System.out.println("Enter expense amount: ");
         double amount = scan.nextDouble();
+        scan.nextLine();
 
         System.out.println("Enter expense category: ");
         String category = scan.nextLine();
@@ -94,5 +99,9 @@ public class UserInterface
 
     public void displayTenantRecord() {
         tenantRecord.displayTenantRecord();
+    }
+
+    public void displayAnnualReport() {
+        annualReport.displayReport();
     }
 }

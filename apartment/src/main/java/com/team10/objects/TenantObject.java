@@ -48,7 +48,7 @@ public class TenantObject
     }
 
     public void addPayment(int month, double amount) {
-        payment[month+1] = amount;
+        payment[month] = amount;
     }
 
     public double[] getPayment() {

@@ -15,19 +15,29 @@ import java.util.ArrayList;
 
 import com.team10.records.ExpenseRecord;
 import com.team10.records.PaymentRecord;
+import com.team10.records.TenantRecord;
 
 public class AnnualReport
 {
+    TenantRecord tenantRecord;
+    ExpenseRecord expenseRecord;
+
     public AnnualReport() {
         
     }
 
-    public void getReport() {
-
+    public AnnualReport(TenantRecord tenantRecord, ExpenseRecord expenseRecord) {
+        this.tenantRecord = tenantRecord;
+        this.expenseRecord = expenseRecord;
     }
 
-    private double sumRecord(ArrayList expRec, ArrayList payRec) {
-        double sum = 0;
-        return sum;
+    public void displayReport() {
+        double income = tenantRecord.calculatePaymentSum();
+        double expense = expenseRecord.calculateExpenseSum();
+        double balance = income - expense;
+
+        System.out.println("Income: " + income);
+        System.out.println("Expenses: " + expense); //need to divide into categories
+        System.out.println("Balance: " + balance);
     }
 }

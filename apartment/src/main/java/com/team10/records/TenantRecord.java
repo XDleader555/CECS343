@@ -41,6 +41,17 @@ public class TenantRecord extends RecordParent
         return tenantRecord.get(0);
     }
 
+    public double calculatePaymentSum() {
+        double sum = 0;
+        for(int i = 0; i < tenantRecord.size(); i++) {
+            double[] payment = tenantRecord.get(i).getPayment();
+            for (int j = 1; j < payment.length; j++) {
+                sum += payment[i];
+            }
+        }
+        return sum;
+    }
+
     public void displayTenantRecord() {
         for(int i = 0; i < tenantRecord.size(); i++) {
             System.out.println(tenantRecord.get(i));
