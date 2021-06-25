@@ -17,7 +17,7 @@ import com.team10.records.RecordParent;
 
 public class LoginRecord extends RecordParent
 {
-    Arraylist<LoginObject> LoginRecord;
+    ArrayList<LoginObject> LoginRecord;
 
     public LoginRecord() {
         

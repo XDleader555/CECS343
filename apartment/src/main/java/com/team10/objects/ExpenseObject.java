@@ -37,6 +37,10 @@ public class ExpenseObject
         return amount;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public String toString() {
         return month + "/" + day + " " + payee + " " + amount + " " + category;
     }

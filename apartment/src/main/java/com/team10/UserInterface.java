@@ -32,7 +32,7 @@ public class UserInterface
     public UserInterface() {
         tenantRecord = new TenantRecord();
         expenseRecord = new ExpenseRecord();
-        annualReport = new AnnualReport();
+        annualReport = new AnnualReport(tenantRecord, expenseRecord);
     }
 
     public void userInputExpense() {

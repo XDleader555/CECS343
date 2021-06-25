@@ -46,7 +46,7 @@ public class TenantRecord extends RecordParent
         for(int i = 0; i < tenantRecord.size(); i++) {
             double[] payment = tenantRecord.get(i).getPayment();
             for (int j = 1; j < payment.length; j++) {
-                sum += payment[i];
+                sum += payment[j];
             }
         }
         return sum;

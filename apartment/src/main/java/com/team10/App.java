@@ -24,6 +24,7 @@ public class App
         ui.userInputPayment();
         ui.displayPaymentRecord();
         ui.userInputExpense();
-        ui.displayExpenseRecord(); */
+        ui.displayExpenseRecord();
+        ui.displayAnnualReport();*/
     }
 }
