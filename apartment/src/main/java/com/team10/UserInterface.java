@@ -38,9 +38,17 @@ public class UserInterface
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter month of expense: ");
+        while (!scan.hasNextInt()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
         int month = scan.nextInt();
 
         System.out.println("Enter day of expense: ");
+        while (!scan.hasNextInt()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
         int day = scan.nextInt();
         scan.nextLine();
 
@@ -48,6 +56,10 @@ public class UserInterface
         String payee = scan.nextLine();
 
         System.out.println("Enter expense amount: ");
+        while (!scan.hasNextDouble()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
         double amount = scan.nextDouble();
         scan.nextLine();
 
@@ -62,12 +74,24 @@ public class UserInterface
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter tenant apartment number: ");
-        int aptNum = scan.nextInt();
+        while (!scan.hasNextInt()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
+        int aptNum  = scan.nextInt();
 
         System.out.println("Enter month of payment: ");
+        while (!scan.hasNextInt()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
         int month = scan.nextInt();
 
         System.out.println("Enter amount paid: ");
+        while (!scan.hasNextDouble()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
         double amount = scan.nextDouble();
 
         TenantObject ten = tenantRecord.getTenant(aptNum);
@@ -82,7 +106,12 @@ public class UserInterface
         String name = scan.nextLine();
 
         System.out.println("Enter tenant apartment number: ");
-        int aptNum = scan.nextInt();
+        while (!scan.hasNextInt()) {
+            System.out.println("Invalid Input. Please try again: ");
+            scan.next();
+        }
+        int aptNum  = scan.nextInt();
+
 
         TenantObject t = new TenantObject(name, aptNum);
         tenantRecord.addTenant(t);
