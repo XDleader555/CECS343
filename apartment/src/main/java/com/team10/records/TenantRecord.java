@@ -30,7 +30,7 @@ public class TenantRecord
         tenantRecord = new ArrayList<TenantObject>();
     }
 
-    public ArrayList getRecord() {
+    public ArrayList<TenantObject> getRecord() {
         return tenantRecord;
     }
 
