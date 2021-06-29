@@ -10,6 +10,8 @@
  */
 
 package com.team10.records;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -79,18 +81,25 @@ public class TenantRecord
         fo.close();
     }
 
-    BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
-    public void TenantReader(){
+    
+    public void TenantReader() throws FileNotFoundException{
+        BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
         ArrayList <String> TenantList = new ArrayList<>();
-        String line = BuffReader.readLine();
-        while(line != null){
-            TenantList.add(line);
-            line = BuffReader.readLine();
+        try {
+            String line = BuffReader.readLine();
+            while(line != null){
+                TenantList.add(line);
+                line = BuffReader.readLine();
+            }
+            BuffReader.close();
+            for(int i = 0; i < TenantList.size(); i++){
+                System.out.println(TenantList.get(i));
+            }
+            
+        } catch (Exception e) {
+            System.out.println("File Not Found");
         }
-        BuffReader.close();
-        for(int i = 0; i < TenantList.size(); i++){
-            System.out.println(TenantList.get(i));
-        }
+
     }
 
 }
