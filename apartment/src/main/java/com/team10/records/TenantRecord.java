@@ -42,7 +42,7 @@ public class TenantRecord
                 return tenantRecord.get(i);
             }
         }
-        return tenantRecord.get(0);
+        return null;
     }
 
     public double calculatePaymentSum() {
