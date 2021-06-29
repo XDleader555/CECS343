@@ -81,17 +81,4 @@ public class LoginRecord
         return false;
     }
 
-    public ArrayList<LoginObject> getLoginRecord(){
-        return LoginRecord;
-    }
-
-    public void addLogin(LoginObject L){
-        LoginRecord.add(L);
-    }
-
-    // public void displayLoginRecord(){
-    //     for(int i = 0; i < LoginRecord.size(); i++) {
-    //         System.out.println(Arrays.toString(LoginRecord.get(i)));
-    //     }
-    // }
 }

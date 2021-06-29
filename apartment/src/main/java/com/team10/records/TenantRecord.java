@@ -65,6 +65,10 @@ public class TenantRecord
     }
 
     public void displayPaymentRecord() {
+        String[] columns = {"Apt. No", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        
+        System.out.println(Arrays.toString(columns));
+        
         for(int i = 0; i < tenantRecord.size(); i++) {
             System.out.println(Arrays.toString(tenantRecord.get(i).getPayment()));
         }
