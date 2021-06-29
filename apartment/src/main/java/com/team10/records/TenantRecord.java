@@ -83,18 +83,13 @@ public class TenantRecord
 
     
     public void TenantReader() throws FileNotFoundException{
-        BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
-        ArrayList <String> TenantList = new ArrayList<>();
         try {
+            BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
             String line = BuffReader.readLine();
             while(line != null){
-                TenantList.add(line);
                 line = BuffReader.readLine();
             }
             BuffReader.close();
-            for(int i = 0; i < TenantList.size(); i++){
-                System.out.println(TenantList.get(i));
-            }
             
         } catch (Exception e) {
             System.out.println("File Not Found");
