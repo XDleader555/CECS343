@@ -26,13 +26,6 @@ public class App
     {
         LoginRecord login = new LoginRecord();
         Scanner userin = new Scanner(System.in);
-
-        TenantRecord tenantRecord = new TenantRecord();
-        try {
-            tenantRecord.TenantReader();
-        } catch (Exception e) {
-            System.out.println("No File TenantList.txt Exists.");
-        }
         
 
         while(true) { 
