@@ -12,21 +12,28 @@
 package com.team10;
 
 import com.team10.UserInterface;
+import com.team10.objects.TenantObject;
 import com.team10.records.LoginRecord;
+import com.team10.records.TenantRecord;
+
 import java.util.Scanner;
 
 public class App 
 {
+
+    
     public static void main( String[] args )
     {
         LoginRecord login = new LoginRecord();
         Scanner userin = new Scanner(System.in);
+        
 
         while(true) { 
             login.displayPrompt();
             
-            /*UserInterface ui = new UserInterface();
-            ui.userInputTenant();
+            UserInterface ui = new UserInterface();
+            ui.userInterfaceLoop();
+            /*ui.userInputTenant();
             ui.displayTenantRecord();
             ui.userInputPayment();
             ui.displayPaymentRecord();

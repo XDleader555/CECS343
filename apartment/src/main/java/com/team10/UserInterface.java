@@ -34,6 +34,50 @@ public class UserInterface
         annualReport = new AnnualReport(tenantRecord, expenseRecord);
     }
 
+    public void userInterfaceLoop() {
+        boolean login = true;
+        Scanner scan = new Scanner(System.in);
+        while (login) {
+            System.out.println("Enter 't' to add a tenant, \n" +
+            "'p' to add a payment, \n" +
+            "'e' to add an expense, \n" +
+            "'a' to view the annual record, \n" +
+            "'1' to view the tenant report, \n" +
+            "'2' to view the payment report, \n" +
+            "'3' to view the expense report, \n" +
+            "'x' to exit the program");
+            String input = scan.nextLine();
+            switch(input) {
+                case "t":
+                    userInputTenant();
+                    break;
+                case "p":
+                    userInputPayment();
+                    break;
+                case "e":
+                    userInputExpense();
+                    break;
+                case "a":
+                    displayAnnualReport();
+                    break;
+                case "1":
+                    displayTenantRecord();
+                    break;
+                case "2":
+                    displayPaymentRecord();
+                    break;
+                case "3":
+                    displayExpenseRecord();
+                    break;
+                case "x":
+                    login = false;
+                    break;  
+                default:
+                    System.out.println("Invalid input. Please try again: ");
+              }
+        }
+    }
+
     public void userInputExpense() {
         Scanner scan = new Scanner(System.in);
 

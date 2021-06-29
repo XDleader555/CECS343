@@ -11,7 +11,7 @@
 
 package com.team10.records;
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 import com.team10.objects.LoginObject;
 import java.util.Scanner;
@@ -81,7 +81,7 @@ public class LoginRecord
         return false;
     }
 
-    public ArrayList getLoginRecord(){
+    public ArrayList<LoginObject> getLoginRecord(){
         return LoginRecord;
     }
 
