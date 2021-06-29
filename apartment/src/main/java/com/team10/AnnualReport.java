@@ -14,7 +14,6 @@ package com.team10;
 import java.util.ArrayList;
 
 import com.team10.records.ExpenseRecord;
-import com.team10.records.PaymentRecord;
 import com.team10.records.TenantRecord;
 
 public class AnnualReport

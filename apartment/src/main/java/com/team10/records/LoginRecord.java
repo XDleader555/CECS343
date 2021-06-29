@@ -11,11 +11,11 @@
 
 package com.team10.records;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.team10.objects.LoginObject;
-import com.team10.records.RecordParent;
 
-public class LoginRecord extends RecordParent
+public class LoginRecord
 {
     ArrayList<LoginObject> LoginRecord;
 

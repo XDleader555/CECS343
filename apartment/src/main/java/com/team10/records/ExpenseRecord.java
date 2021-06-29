@@ -13,9 +13,8 @@ package com.team10.records;
 import java.util.ArrayList;
 
 import com.team10.objects.ExpenseObject;
-import com.team10.records.RecordParent;
 
-public class ExpenseRecord extends RecordParent
+public class ExpenseRecord
 {
     ArrayList<ExpenseObject> expenseRecord;
     ArrayList<String> categories;

@@ -10,6 +10,7 @@
  */
 
 package com.team10.records;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,9 +19,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.team10.objects.TenantObject;
-import com.team10.records.RecordParent;
 
-public class TenantRecord extends RecordParent
+public class TenantRecord
 {   
     ArrayList<TenantObject> tenantRecord;
     
