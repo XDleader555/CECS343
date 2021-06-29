@@ -79,4 +79,18 @@ public class TenantRecord
         fo.close();
     }
 
+    BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
+    public void TenantReader(){
+        ArrayList <String> TenantList = new ArrayList<>();
+        String line = BuffReader.readLine();
+        while(line != null){
+            TenantList.add(line);
+            line = BuffReader.readLine();
+        }
+        BuffReader.close();
+        for(int i = 0; i < TenantList.size(); i++){
+            System.out.println(TenantList.get(i));
+        }
+    }
+
 }
