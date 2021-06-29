@@ -25,8 +25,9 @@ public class App
         while(true) { 
             login.displayPrompt();
             
-            /*UserInterface ui = new UserInterface();
-            ui.userInputTenant();
+            UserInterface ui = new UserInterface();
+            ui.userInterfaceLoop();
+            /*ui.userInputTenant();
             ui.displayTenantRecord();
             ui.userInputPayment();
             ui.displayPaymentRecord();
