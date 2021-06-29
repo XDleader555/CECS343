@@ -22,7 +22,7 @@ public class App
         LoginRecord login = new LoginRecord();
         Scanner userin = new Scanner(System.in);
 
-        while(true) {
+        while(true) { 
             login.displayPrompt();
             
             /*UserInterface ui = new UserInterface();

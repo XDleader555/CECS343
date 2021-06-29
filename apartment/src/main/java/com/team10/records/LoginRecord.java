@@ -22,7 +22,13 @@ public class LoginRecord
     ArrayList<LoginObject> LoginRecord;
 
     public LoginRecord() {
-        
+        // Someone add the import previous logins here!!
+
+        // Initialize a new login record
+        if(LoginRecord == null) {
+            System.out.println("New system detected. Please input new credentials.");
+            displayPrompt();
+        }
     }
 
     public void displayPrompt() {
@@ -42,6 +48,7 @@ public class LoginRecord
             if(verifyLogin(username, password)) {
                 break;
             }
+
             System.out.println("Invalid login\n");
 
             // Sleep the system
@@ -55,12 +62,18 @@ public class LoginRecord
 
     private boolean verifyLogin(String username, String password) {
         if(LoginRecord == null) {
-            return false;
+            LoginRecord = new ArrayList<>();
+            LoginRecord.add(new LoginObject(username, password));
+
+            System.out.println("New login accepted.\n");
+            return true;
         }
 
         for(LoginObject record:LoginRecord) {
-            if(username == record.GetUserName()) {
-                if(password == record.GetPassword()) {
+            //System.out.printf("Debug: username=%s, password=%s\n", record.GetUserName(), record.GetPassword());
+            if(username.equals(record.GetUserName())) {
+                if(password.equals(record.GetPassword())) {
+                    System.out.println("Login Verified.\n");
                     return true;
                 }
             }
