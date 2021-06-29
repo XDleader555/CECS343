@@ -24,10 +24,6 @@ public class App
 
         while(true) {
             login.displayPrompt();
-
-            System.out.println("Main Menu");
-            System.out.println("1. Enter New Tenant");
-
             
             /*UserInterface ui = new UserInterface();
             ui.userInputTenant();
