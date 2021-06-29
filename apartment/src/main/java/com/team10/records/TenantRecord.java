@@ -10,6 +10,10 @@
  */
 
 package com.team10.records;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -63,4 +67,16 @@ public class TenantRecord extends RecordParent
             System.out.println(Arrays.toString(tenantRecord.get(i).getPayment()));
         }
     }
+
+    File file = new File("ListOfTenants.txt");
+    public void TenantWriter() throws FileNotFoundException, IOException{
+        PrintWriter pw = new PrintWriter(new FileOutputStream(file));
+        FileOutputStream fo = new FileOutputStream(file);
+        for(int i = 0; i < tenantRecord.size(); i++) {
+            pw.write(tenantRecord.get(i).toString());
+        }
+        pw.close();
+        fo.close();
+    }
+
 }

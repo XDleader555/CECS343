@@ -30,7 +30,7 @@ public class PaymentRecord extends RecordParent
     public void addPayment(PaymentObject p) {
         paymentRecord.add(p);
     }
-
+    
     public void displayRecord() {
 
     }
