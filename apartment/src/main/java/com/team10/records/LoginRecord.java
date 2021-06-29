@@ -32,6 +32,8 @@ public class LoginRecord extends RecordParent
     }
 
     public void displayLoginRecord(){
-        
+        for(int i = 0; i < LoginRecord.size(); i++) {
+            System.out.println(Arrays.toString(LoginRecord.get(i)));
+        }
     }
 }

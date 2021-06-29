@@ -23,6 +23,11 @@ public class LoginObject
         
     }
 
+    public LoginObject(String Username, String Password){
+        this.UserName = Username;
+        this.Password = Password;
+    }
+
     //Set and Get
     public void SetUserName(String UserName){
         this.UserName = UserName;
