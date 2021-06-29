@@ -35,8 +35,6 @@ public class AnnualReport
         double expense = expenseRecord.calculateExpenseSum();
         double balance = income - expense;
 
-        ArrayList<String> categories = expenseRecord.getCategories();
-
         System.out.println("Income");
         System.out.println("Rent: " + income);
         System.out.println("Expenses");
