@@ -106,6 +106,7 @@ public class UserInterface
 
         ExpenseObject exp = new ExpenseObject(month, day, payee, amount, category);
         expenseRecord.addExpense(exp);
+        scan.nextLine();
     }
 
     public void userInputPayment() {
@@ -132,6 +133,7 @@ public class UserInterface
 
         TenantObject ten = tenantRecord.getTenant(aptNum);
         ten.addPayment(month, amount);
+        scan.nextLine();
     }
 
     public void userInputTenant() {
@@ -148,6 +150,7 @@ public class UserInterface
 
         TenantObject t = new TenantObject(name, aptNum);
         tenantRecord.addTenant(t);
+        scan.nextLine();
     }
 
     public void displayExpenseRecord() {
