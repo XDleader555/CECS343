@@ -11,9 +11,11 @@
 
 package com.team10.objects;
 
+import java.io.Serializable;
+
 import com.team10.records.TenantRecord;
 
-public class TenantObject
+public class TenantObject implements Serializable
 {
     String Name;
     int AptNum;

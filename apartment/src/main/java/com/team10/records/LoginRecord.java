@@ -13,6 +13,7 @@ package com.team10.records;
 import java.util.ArrayList;
 // import java.util.Arrays;
 
+import com.team10.SaveObject;
 import com.team10.objects.LoginObject;
 import java.util.Scanner;
 import java.lang.Thread;
@@ -22,7 +23,7 @@ public class LoginRecord
     ArrayList<LoginObject> LoginRecord;
 
     public LoginRecord() {
-        // Someone add the import previous logins here!!
+        LoginRecord = (ArrayList<LoginObject>) SaveObject.ImportObject("loginrecord.o");
 
         // Initialize a new login record
         if(LoginRecord == null) {
@@ -63,8 +64,7 @@ public class LoginRecord
     private boolean verifyLogin(String username, String password) {
         if(LoginRecord == null) {
             LoginRecord = new ArrayList<>();
-            LoginRecord.add(new LoginObject(username, password));
-
+            addLogin(username, password);
             System.out.println("New login accepted.\n");
             return true;
         }
@@ -79,6 +79,11 @@ public class LoginRecord
             }
         }
         return false;
+    }
+
+    public void addLogin(String username, String password) {
+        LoginRecord.add(new LoginObject(username, password));
+        SaveObject.ExportObject(LoginRecord, "loginrecord.o");
     }
 
 }
