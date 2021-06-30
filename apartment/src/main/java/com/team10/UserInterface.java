@@ -72,8 +72,6 @@ public class UserInterface
                     System.out.println("Invalid input. Please try again: ");
               }
         }
-
-        scan.close();
     }
 
     public void userInputExpense() {

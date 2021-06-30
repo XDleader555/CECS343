@@ -60,7 +60,6 @@ public class LoginRecord
             }
         }
 
-        userin.close();
     }
 
     private boolean verifyLogin(String username, String password) {
