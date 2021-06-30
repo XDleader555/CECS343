@@ -23,7 +23,7 @@ public class SaveObject
 
     public static void init(String p) {
         path = p;
-        System.out.printf("Path: %s\n", path);
+        System.out.printf("Save Path: %s\n", path);
 
         // Create the data directory if it doesn't exist
         File f = new File(path);
@@ -44,9 +44,9 @@ public class SaveObject
             oos.writeObject(obj);
             oos.close();
             fos.close();
-            System.out.printf("Saved %s\n", filename);
+            System.out.printf("Saved \"%s\"\n", filename);
         } catch(Exception e) {
-            System.out.printf("Error saving %s.\n%s\n", filename, e.getMessage());
+            System.out.printf("Error saving \"%s\".\n%s\n", filename, e.getMessage());
         }
     }
 
@@ -66,10 +66,10 @@ public class SaveObject
             Object obj = ois.readObject();
             ois.close();
             fis.close();
-            System.out.printf("Imported %s\n", obj.getClass());
+            System.out.printf("Imported \"%s\"\n", filename);
             return obj;
         } catch(Exception e) {
-            System.out.printf("Error importing %s.\n%s\n", filename, e.getMessage());
+            System.out.printf("Error importing \"%s\".\n%s\n", filename, e.getMessage());
             return null;
         }
     }
