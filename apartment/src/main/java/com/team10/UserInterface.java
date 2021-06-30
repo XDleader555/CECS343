@@ -12,21 +12,18 @@
 package com.team10;
 
 import com.team10.objects.ExpenseObject;
-import com.team10.objects.LoginObject;
 import com.team10.objects.TenantObject;
 import com.team10.records.ExpenseRecord;
 import com.team10.records.TenantRecord;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-
-import com.team10.AnnualReport;
 
 public class UserInterface
 {
     TenantRecord tenantRecord;
     ExpenseRecord expenseRecord;
     AnnualReport annualReport;
+    Scanner scan = new Scanner(System.in);
 
     public UserInterface() {
         tenantRecord = new TenantRecord();
@@ -36,7 +33,6 @@ public class UserInterface
 
     public void userInterfaceLoop() {
         boolean login = true;
-        Scanner scan = new Scanner(System.in);
         while (login) {
             System.out.println("Enter 't' to add a tenant, \n" +
             "'p' to add a payment, \n" +
@@ -76,11 +72,11 @@ public class UserInterface
                     System.out.println("Invalid input. Please try again: ");
               }
         }
+
+        scan.close();
     }
 
     public void userInputExpense() {
-        Scanner scan = new Scanner(System.in);
-
         System.out.println("Enter month of expense: ");
         while (!scan.hasNextInt()) {
             System.out.println("Invalid Input. Please try again: ");
@@ -115,8 +111,6 @@ public class UserInterface
     }
 
     public void userInputPayment() {
-        Scanner scan = new Scanner(System.in);
-
         System.out.println("Enter tenant apartment number: ");
         while (!scan.hasNextInt()) {
             System.out.println("Invalid Input. Please try again: ");
@@ -140,12 +134,9 @@ public class UserInterface
 
         TenantObject ten = tenantRecord.getTenant(aptNum);
         ten.addPayment(month, amount);
-
     }
 
     public void userInputTenant() {
-        Scanner scan = new Scanner(System.in);
-        
         System.out.println("Enter tenant name: ");
         String name = scan.nextLine();
 
