@@ -12,6 +12,7 @@
 package com.team10.records;
 import java.util.ArrayList;
 
+import com.team10.SaveObject;
 import com.team10.objects.ExpenseObject;
 
 public class ExpenseRecord
@@ -20,8 +21,19 @@ public class ExpenseRecord
     ArrayList<String> categories;
     
     public ExpenseRecord() {
-        expenseRecord = new ArrayList<ExpenseObject>();
-        categories = new ArrayList<String>();
+        // Import data
+        expenseRecord = (ArrayList<ExpenseObject>) SaveObject.ImportObject("expenserecord.o");
+        categories = (ArrayList<String>) SaveObject.ImportObject("categories.o");
+
+        if(expenseRecord == null){
+            expenseRecord = new ArrayList<ExpenseObject>();
+            SaveObject.ExportObject(expenseRecord, "expenserecord.o");
+        }
+
+        if(categories == null){
+            categories = new ArrayList<String>();
+            SaveObject.ExportObject(categories, "categories.o");
+        }
     }
 
     public ArrayList<ExpenseObject> getRecord() {
@@ -38,6 +50,9 @@ public class ExpenseRecord
             categories.add(e.getCategory());
         }
 
+        // Flush saves to file right away
+        SaveObject.ExportObject(expenseRecord, "expenserecord.o");
+        SaveObject.ExportObject(categories, "categories.o");
     }
 
     public boolean hasCategory(String cat) {

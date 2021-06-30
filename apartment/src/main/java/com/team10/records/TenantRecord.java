@@ -20,6 +20,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.team10.SaveObject;
 import com.team10.objects.TenantObject;
 
 public class TenantRecord
@@ -27,7 +28,13 @@ public class TenantRecord
     ArrayList<TenantObject> tenantRecord;
     
     public TenantRecord() {
-        tenantRecord = new ArrayList<TenantObject>();
+        // Import data
+        tenantRecord = (ArrayList<TenantObject>) SaveObject.ImportObject("tenantrecord.o");
+
+        if(tenantRecord == null) {
+            tenantRecord = new ArrayList<TenantObject>();
+            SaveObject.ExportObject(tenantRecord, "tenantrecord.o");
+        }
     }
 
     public ArrayList<TenantObject> getRecord() {
@@ -36,6 +43,9 @@ public class TenantRecord
 
     public void addTenant(TenantObject t) {
         tenantRecord.add(t);
+
+        // Flush saves to file right away
+        SaveObject.ExportObject(tenantRecord, "tenantrecord.o");
     }
 
     public TenantObject getTenant(int aptNum) {
@@ -73,32 +83,4 @@ public class TenantRecord
             System.out.println(Arrays.toString(tenantRecord.get(i).getPayment()));
         }
     }
-
-    File file = new File("ListOfTenants.txt");
-    public void TenantWriter() throws FileNotFoundException, IOException{
-        PrintWriter pw = new PrintWriter(new FileOutputStream(file));
-        FileOutputStream fo = new FileOutputStream(file);
-        for(int i = 0; i < tenantRecord.size(); i++) {
-            pw.write(tenantRecord.get(i).toString());
-        }
-        pw.close();
-        fo.close();
-    }
-
-    
-    public void TenantReader() throws FileNotFoundException{
-        try {
-            BufferedReader BuffReader = new BufferedReader(new FileReader("ListOfTenants.txt"));
-            String line = BuffReader.readLine();
-            while(line != null){
-                line = BuffReader.readLine();
-            }
-            BuffReader.close();
-            
-        } catch (Exception e) {
-            System.out.println("File Not Found");
-        }
-
-    }
-
 }
