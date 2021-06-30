@@ -13,8 +13,6 @@ package com.team10.objects;
 
 import java.io.Serializable;
 
-import com.team10.records.LoginRecord;
-
 public class LoginObject implements Serializable
 {   
     String UserName;

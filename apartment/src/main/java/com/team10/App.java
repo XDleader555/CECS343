@@ -11,15 +11,10 @@
 
 package com.team10;
 
-import com.team10.UserInterface;
-import com.team10.objects.TenantObject;
 import com.team10.records.LoginRecord;
-import com.team10.records.TenantRecord;
-import com.team10.SaveObject;
 
 import java.io.File;
 import java.net.URISyntaxException;
-import java.util.Scanner;
 
 public class App 
 {
